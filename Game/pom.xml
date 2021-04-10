@@ -11,7 +11,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>ru.pic.java.goncharov.laptev.rush.00</groupId>
+            <groupId>edu.school21</groupId>
             <artifactId>ChaseLogic-folder</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
