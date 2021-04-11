@@ -8,7 +8,7 @@ public class ThermCard {
     private int goalY;
 
     public ThermCard(int[][] card, int goalX, int goalY) {
-        this.card = setArrayToWrapper(card);
+        this.card = new IntArrayWrapper(card).getArrayWrapper();
         this.goalX = goalX;
         this.goalY = goalX;
     }
@@ -44,35 +44,6 @@ public class ThermCard {
         }
 
         return card;
-    }
-
-    private int[][] setArrayToWrapper(int[][] arr) {
-        int[][] wrap = new int[arr.length + 2][arr[0].length + 2];
-
-        for (int y = 0; y < wrap.length; y += wrap.length - 1) {
-            for (int x = 0; x < wrap[0].length; x++) {
-                wrap[y][x] = Integer.MAX_VALUE;
-            }
-        }
-
-        for (int x = 0; x < wrap[0].length; x += wrap[0].length - 1) {
-            for (int y = 0; y < wrap.length; y++) {
-                wrap[y][x] = Integer.MAX_VALUE;
-            }
-        }
-        for (int y = 0; y < arr.length; y++) {
-            System.arraycopy(arr[y], 0, wrap[y + 1], 1, arr[y].length);
-        }
-        return wrap;
-    }
-
-    private int[][] getArrayFromWrapper(int[][] arr) {
-        int[][] newArr = new int[arr.length - 2][arr[0].length - 2];
-
-        for (int y = 0; y < newArr.length; y++) {
-            System.arraycopy(arr[y + 1], 1, newArr[y], 0, newArr[y].length);
-        }
-        return newArr;
     }
 
     private int getMin(int x, int y) {

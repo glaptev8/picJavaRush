@@ -1,12 +1,15 @@
 package edu.school21.app;
 
-public class Move {
+public enum Move {
 
-    private Player player;
-    private Direction direction;
+    UP,
 
-    public Move(Player player, Direction direction) {
-        this.player = player;
-        this.direction = direction;
-    }
+    LEFT,
+
+    RIGHT,
+
+    DOWN,
+
+    NULL,
+    ;
 }

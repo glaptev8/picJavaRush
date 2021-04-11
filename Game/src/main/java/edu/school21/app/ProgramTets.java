@@ -6,13 +6,13 @@ import java.util.List;
 public class ProgramTets {
     public static void main(String[] args) {
 
-        int[][] arr = new int[11][11];
+        int[][] arr = new int[9][9];
         List<Player> list = new ArrayList<Player>();
-        Player player = new Shadower(10, 10);
+        Player player = new Shadower(8, 8);
         list.add(player);
 
-        while (!(player.getX() == 0 && player.getY() == 0)) {
-            player = NestStep.INSTANSE.getActualNextStep(list, arr, 0, 0);
+        while (!(player.getX() == 4 && player.getY() == 4)) {
+            player = NestStep.INSTANSE.getActualNextStep(list, arr, 4, 4);
             arr[player.getY()][player.getX()] = (char) 7;
             for (int[] line : arr) {
                 for (int tmp : line) {
@@ -24,6 +24,5 @@ public class ProgramTets {
 
             System.out.println();
         }
-
     }
 }
