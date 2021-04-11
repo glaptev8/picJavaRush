@@ -1,23 +1,41 @@
 package edu.school21.app;
 
 public class ProgramTets {
+    private static final int SIZE = 9;
+
+    private static final int SHADOWER_X = 0;
+    private static final int SHADOWER_Y = 0;
+
+    private static final int GOAL_X = 4;
+    private static final int GOAL_Y = 4;
+
+    private static final int PLAYER_X = 8;
+    private static final int PLAYER_Y = 8;
+
+
     public static void main(String[] args) {
 
-        Cell[][] cells = new Cell[9][9];
-        int[][] arr = new int[9][9];
-        for (int y = 0; y < 9; y++) {
-            for (int x = 0; x < 9; x++) {
+        Cell[][] cells = new Cell[SIZE][SIZE];
+        int[][] arr = new int[SIZE][SIZE];
+        for (int y = 0; y < SIZE; y++) {
+            for (int x = 0; x < SIZE; x++) {
                 cells[y][x] = new Cell();
                 cells[y][x].setCordinates(x, y);
             }
         }
-        cells[8][8] = new Cell(MapObject.SHADOWER);
-        Cell shadower = cells[8][8];
-        shadower.setMove(Move.DOWN);
-        shadower.setCordinates(8, 8);
+        cells[SHADOWER_Y][SHADOWER_X] = new Cell(MapObject.SHADOWER);
+        cells[SHADOWER_Y][SHADOWER_X].setCordinates(SHADOWER_X,SHADOWER_Y);
 
-        while (shadower != null && !(shadower.getX() == 4 && shadower.getY() == 4)) {
-            shadower = NestStep.INSTANSE.getNextStep(cells, 4, 4);
+        cells[GOAL_Y][GOAL_X] = new Cell(MapObject.GOAL);
+        cells[GOAL_Y][GOAL_X].setCordinates(GOAL_X,GOAL_Y);
+
+        cells[PLAYER_Y][PLAYER_X] = new Cell(MapObject.PLAYER);
+        cells[PLAYER_Y][PLAYER_X].setCordinates(PLAYER_X,PLAYER_Y);
+
+        Cell shadower = cells[SHADOWER_Y][SHADOWER_X];
+
+        while (shadower != null && !(shadower.getX() == GOAL_X && shadower.getY() == GOAL_Y)) {
+            shadower = NestStep.INSTANSE.getNextStep(cells);
             if (shadower != null && shadower.getMove() != null) {
                 swapCell(cells, shadower);
             }
