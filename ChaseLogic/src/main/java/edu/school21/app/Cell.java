@@ -22,6 +22,10 @@ public class Cell {
         return mapObject;
     }
 
+    public void setMapObject(MapObject mapObject) {
+        this.mapObject = mapObject;
+    }
+
     public int getX() {
         return x;
     }

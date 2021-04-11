@@ -19,6 +19,15 @@
             </plugin>
         </plugins>
     </build>
+    <dependencies>
+        <dependency>
+            <groupId>jcomander</groupId>
+            <artifactId>org.jcommander</artifactId>
+            <version>1.7</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/../external_librires/jcommander-1.7.jar</systemPath>
+        </dependency>
+    </dependencies>
 
 
 </project>

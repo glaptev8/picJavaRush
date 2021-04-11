@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/../Game/target/classes" />
     <output-test url="file://$MODULE_DIR$/../Game/target/test-classes" />
     <content url="file://$MODULE_DIR$/../Game">
@@ -14,18 +14,18 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="ChaseLogic" />
     <orderEntry type="module-library">
-      <library name="Maven: JCDP:org.jcdp:2.3">
+      <library name="Maven: jcomander:org.jcommander:1.7">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../external_librires/JCDP-2.0.3.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/../external_librires/jcommander-1.7.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="Maven: jcomander:org.jcommander:2.3">
+      <library name="Maven: JCDP:org.jcdp:2.3">
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../external_librires/jcommander-1.7.jar!/" />
+          <root url="jar://$MODULE_DIR$/../external_librires/JCDP-2.0.3.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
