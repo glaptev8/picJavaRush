@@ -2,14 +2,24 @@ package edu.school21.app;
 
 public enum MapObject {
 
-    PLAYER,
+    PLAYER("P"),
 
-    SHADOWER,
+    SHADOWER("S"),
 
-    GOAL,
+    GOAL("G"),
 
-    WALL,
+    WALL("X"),
 
-    FREE,
+    FREE("0"),
     ;
+
+    private String symbol;
+
+    MapObject(String symbol) {
+        this.symbol = symbol;
+    }
+
+    public String getSymbol() {
+        return symbol;
+    }
 }

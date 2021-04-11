@@ -10,6 +10,5 @@ public enum Move {
 
     DOWN,
 
-    NULL,
     ;
 }

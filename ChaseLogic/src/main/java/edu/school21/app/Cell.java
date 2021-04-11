@@ -2,32 +2,34 @@ package edu.school21.app;
 
 public class Cell {
 
-    private final MapObject mapObject;
+    private MapObject mapObject;
 
-    private Move move;
+    private Move move = null;
 
     private int x;
 
     private int y;
 
+    public Cell() {
+        this.mapObject = MapObject.FREE;
+    }
+
     public Cell(MapObject mapObject) {
         this.mapObject = mapObject;
     }
 
+    public MapObject getMapObject() {
+        return mapObject;
+    }
+
     public int getX() {
         return x;
-    }
-    public void setNewX(int newX) {
-        this.x = x;
     }
 
     public int getY() {
         return y;
     }
 
-    public void setY(int y) {
-        this.y = y;
-    }
 
     public Move getMove() {
         return move;
@@ -36,4 +38,10 @@ public class Cell {
     public void setMove(Move move) {
         this.move = move;
     }
+
+    public void setCordinates(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
 }

@@ -2,7 +2,7 @@ package edu.school21.app;
 
 public class ThermCard {
 
-    private static final char GOAL_NUMBER = 0x1;
+    private static final int GOAL_NUMBER = 1;
     private int[][] card;
     private int goalX;
     private int goalY;
@@ -15,7 +15,7 @@ public class ThermCard {
 
     public int[][] getThermCard() {
         card[goalY + 1][goalX + 1] = GOAL_NUMBER;
-        char currentElement = GOAL_NUMBER;
+        int currentElement = GOAL_NUMBER;
         int rows = card.length;
         int columns = card[0].length;
 
